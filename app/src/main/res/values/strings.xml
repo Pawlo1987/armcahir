@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CalendarExemp</string>
+    <string name="x">X</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textview">TextView</string>
+    <string name="tvMondayTitle">Пн.</string>
+    <string name="tvTuesdayTitle">Вт.</string>
+    <string name="tvWednesdayTitle">Ср.</string>
+    <string name="tvThursdayTitle">Чт.</string>
+    <string name="tvFridayTitle">Пт.</string>
+    <string name="tvSaturdayTitle">Сб.</string>
+    <string name="tvSundayTitle">Вс.</string>
+    <string name="todo">TODO</string>
+</resources>
