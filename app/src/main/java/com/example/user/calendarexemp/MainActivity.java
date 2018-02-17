@@ -22,10 +22,9 @@ public class MainActivity extends AppCompatActivity {
     String[] data2 = new String[42];
     ViewPager vpMain;
     PagerAdapter pagerAdapter;
-    TextView tvMonthTitle;
+    TextView textView4;
     ImageButton imageButton;
     ImageButton imageButton2;
-    String[] monthName = {"Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"};
 
     static final int PAGE_COUNT = 12;
     MonthFragment monthFragment;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvMonthTitle = findViewById(R.id.tvMonthTitle);
+        textView4 = findViewById(R.id.textView4);
         imageButton = findViewById(R.id.imageButton);
         imageButton2 = findViewById(R.id.imageButton2);
 //        Arrays.fill(data,"");
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 Log.d("MyLog", "onPageSelected, position = " + position);
-                tvMonthTitle.setText(monthName[position]);
+                textView4.setText(String.valueOf(position));
             }
 
             @Override
