@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CalendarExemp</string>
     <string name="x">X</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textview">TextView</string>
 </resources>
