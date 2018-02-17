@@ -6,15 +6,12 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import java.util.Arrays;
 
@@ -30,7 +27,6 @@ public class MonthFragment extends Fragment {
     String[] data2 = new String[42];
     Utils utils;
     int page;
-    //количество дней в месяце
     int[] countDayOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     static final String ARGUMENT_PAGE_NUMBER = "arg_page_number";
@@ -138,18 +134,6 @@ public class MonthFragment extends Fragment {
         Adapter adapter = new Adapter(context, data, data1, data2);
         gvMonth = (GridView) result.findViewById(R.id.gvMonth);
         gvMonth.setAdapter(adapter);
-        gvMonth.setOnScrollListener(new AbsListView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                
-                if(scrollState == 1) Toast.makeText(context, String.valueOf(scrollState), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-
-            }
-        });
         adjustGridView();
 
         return result;

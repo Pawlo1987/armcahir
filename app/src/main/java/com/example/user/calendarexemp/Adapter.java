@@ -1,17 +1,17 @@
 package com.example.user.calendarexemp;
 
 import android.content.Context;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Arrays;
+
+/**
+ * Created by User on 01.02.2018.
+ */
 
 public class Adapter extends BaseAdapter {
     private Context context;
@@ -41,9 +41,8 @@ public class Adapter extends BaseAdapter {
         return position;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         View grid;
         grid = new View(context);
         //LayoutInflater inflater = getLayoutInflater();
@@ -55,14 +54,6 @@ public class Adapter extends BaseAdapter {
         textView.setText(data[position]);
         textView2.setText(data1[position]);
         textView3.setText(data2[position]);
-
-        grid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, data[position], Toast.LENGTH_SHORT).show();
-            }
-        });
-
         return grid;
     }
 }
